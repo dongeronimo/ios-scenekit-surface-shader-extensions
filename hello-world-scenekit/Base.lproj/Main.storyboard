@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Bt-iH-JcF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NJX-Fc-2ih">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,6 +72,35 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="29.23538230884558"/>
+        </scene>
+        <!--Water Test View Controller-->
+        <scene sceneID="Qhf-51-a2c">
+            <objects>
+                <viewController id="NJX-Fc-2ih" customClass="WaterTestViewController" customModule="hello_world_scenekit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wl2-wt-yrm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="water.scn" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="LZl-7V-f0P">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k0k-Tk-ZQE" firstAttribute="trailing" secondItem="LZl-7V-f0P" secondAttribute="trailing" id="0dK-mn-6fs"/>
+                            <constraint firstItem="LZl-7V-f0P" firstAttribute="leading" secondItem="k0k-Tk-ZQE" secondAttribute="leading" id="AHV-Vu-lK6"/>
+                            <constraint firstItem="LZl-7V-f0P" firstAttribute="top" secondItem="k0k-Tk-ZQE" secondAttribute="top" id="RSp-v7-Sxf"/>
+                            <constraint firstItem="k0k-Tk-ZQE" firstAttribute="bottom" secondItem="LZl-7V-f0P" secondAttribute="bottom" id="viC-KT-0p7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k0k-Tk-ZQE"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="LZl-7V-f0P" id="16b-xh-XYx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmt-wv-DTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="29"/>
         </scene>
     </scenes>
 </document>
