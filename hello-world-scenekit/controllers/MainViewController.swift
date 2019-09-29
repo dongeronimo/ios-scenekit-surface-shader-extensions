@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupScene();
     }
-    
+    //Modifies the scale uniform in surfaceShaderExtensionStripes
     @IBAction func onScaleChangeTouch(_ sender: UIButton) {
         //the experiment box
         let shaderExtensionBox: SCNNode = sceneView.scene!.rootNode.childNode(withName: "shader extension box", recursively: true)!
@@ -43,6 +43,7 @@ class MainViewController: UIViewController {
         useCustomShaderProgram(myScene: myScene)
         useShaderExtensions(myScene: myScene)
     }
+    
     private func useCustomShaderProgram(myScene: SCNScene){
         //Search for the shaderBox
         let shaderBox: SCNNode = myScene.rootNode.childNode(withName: "shader box", recursively: true)!
@@ -52,8 +53,7 @@ class MainViewController: UIViewController {
         
         shaderBox.geometry!.firstMaterial?.program = program//Passa pro shaderBox
     }
-
-    
+    //In this method I pass the surfaceExtensionCode to "shader extension box".
     private func useShaderExtensions(myScene: SCNScene){
         //the experiment box
         let shaderExtensionBox: SCNNode = myScene.rootNode.childNode(withName: "shader extension box", recursively: true)!
@@ -66,17 +66,11 @@ class MainViewController: UIViewController {
             let result = hitResults[0]
             let node = result.node
             objectName.text = node.name
-            if(node.name == "shader box" || node.name=="shader extension box"){
-//                //É no shaderModifiers que eu enfio o meu shader custom.
-//                //Ao tocar no botão vou jogar fora todo o shading e retornar um bagulho pink.
-//                node.geometry!.shaderModifiers = [.fragment:
-//                    """
-//                    _output.color.rgb = float3(1.0, 0.0, 1.0);
-//                    """]
-            }
-            else{
-                changeDiffuseToRandomColor(node: node)
-            }
+//            if(node.name == "shader box" || node.name=="shader extension box"){
+//            }
+//            else{
+//                changeDiffuseToRandomColor(node: node)
+//            }
         }
     }
     ///Sets the diffuse channel to some random color, changing from the old color to the
