@@ -17,7 +17,7 @@ class WaterTestViewController: UIViewController {
         sceneView.backgroundColor = UIColor.black
         sceneView.allowsCameraControl = true
         let water: SCNNode = sceneView.scene!.rootNode.childNode(withName: "water box", recursively: true)!
-        setupShaderExtensions(object: water)
+        //setupShaderExtensions(object: water)
     }
     //Creates the shader extensions that create the water effect
     private func setupShaderExtensions(object:SCNNode){
